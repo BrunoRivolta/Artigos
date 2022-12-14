@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(212,212,212,1) 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.cabecalho {
+    background-color: #292828;
+    height: 50px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cabecalho__titulo {
+    margin-left: 10px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.name {
+    color: #292828;
+}
+
+.item__image {
+    width: 255px;
+    transition: 0.5s; 
+    border-bottom: 1px solid #d3d0d0;
+}
+
+.item__image:hover { 
+    transform: scale(0.98); 
+}
+
+.container__flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.itens {
+    border: 1px solid #000000;
+    width: 255px;
+    cursor: pointer;
+    margin: 10px 0;
+    box-shadow: 10px 5px 5px rgb(199, 194, 194)
+}
+
+.itens:hover {
+    background-color: #f0eaea;
+}
+
+.item__info {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid:
+    "titulo titulo"
+    "tipo ."
+    "cor ."
+    "preco valorAntigo"
+    ". frete"
+    ;
+    gap: 10px;
+}
+
+.item__titulo {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 4px;
+    margin: 5px 0 0 4px;
+    grid-area: titulo;
+}
+
+.item__cor {
+    margin-left: 4px;
+    grid-area: cor;
+}
+
+.item__tipo {
+    margin-left: 4px;
+    grid-area: tipo;
+}
+
+.item__preco {
+    font-weight: 700;
+    text-align: center;
+    grid-area: preco;
+}
+
+.item__valor-antigo {
+    color: #6d6a6a;
+    font-weight: 700;
+    text-decoration: line-through;
+    grid-area: valorAntigo;
+}
+
+.item__frete {
+    color: #388fe0;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: end;
+    margin-right: 4px;
+    grid-area: frete;
+}
